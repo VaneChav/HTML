@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EJERCICIO FORMULARIO</title>
+</head>
+<body>
+  <h1>EJERCICIO FORMULARIO</h1>
+
+  <!--Seccion Contacto-->
+
+  <section>
+    <h2>Contacto</h2>
+
+    <!--
+      Atributos comunes en imputs
+      
+      placeholder="valor" ->  Mostrar un texto dentro del campo antes de que el usuario escriba algo. Es como una sugerencia del dato que se espera.
+
+      required -> No recibe valor, es un atributo booleado. Indica que el campo es obligatorio y debe ser completado antes de poder enviar el formulario.
+    -->
+
+    <form id="formulario">
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Juan Chavez"  required />
+      <br>
+
+      <label for="email">Correo Electronico:</label>
+      <input type="email" id="email" placeholder="email@correo.com" required />
+      <br>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" placeholder="Escribe tu mensaje"></textarea>
+      <br>
+
+      <button type="submit">Enviar ✈</button>
+
+    </form>
+
+    <!--Contenedor del mansaje de confirmacion (ficticio)-->
+
+    <div id="mensaje" style="display: none;">
+      <p>¡Gracias por enviar tus datos,nos comunicaremos contigo pronto! 😎</p>
+    </div>
+  </section>
+
+  /*Codigo para que funcione elformulario...*/
+
+</body>
+</html>
