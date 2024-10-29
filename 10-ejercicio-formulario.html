@@ -40,12 +40,37 @@
 
     <!--Contenedor del mansaje de confirmacion (ficticio)-->
 
-    <div id="mensaje" style="display: none;">
+    <div id="mensajeConfirmar" style="display: none;">
       <p>¡Gracias por enviar tus datos,nos comunicaremos contigo pronto! 😎</p>
     </div>
   </section>
 
-  /*Codigo para que funcione elformulario...*/
+  <script>
+    /*Codigo para que funcione elformulario...*/
+
+    //Obtener el formulario y elmensaje de confirmación
+
+    const miFormulario = document.getElementById("formulario");
+    const mensajeConfirmacion = document.getElementById("mensajeConfirmar")
+
+    //Añadir un "escuchador" / "listener" para el "evento" / "event" del boton "submit"
+
+    miFormulario.addEventListener( "submit" , function(event){
+      //Codigo que se va a ejecutar cuando el usuario le pique al boton
+      //alert("Haz dado click en el boton enviar")
+      
+      event.preventDefault(); //Envia que el formulario recargue la pagina
+
+      //Se oculta el elemento <form>
+      
+        miFormulario.style.display = "none";
+      
+      //Mostramos el elemento <did> con el mensaje de confirmacion
+
+      mensajeConfirmacion.style.display = "block";
+    })
+
+  </script>
 
 </body>
 </html>
